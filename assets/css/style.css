@@ -1,0 +1,502 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+p {
+  line-height: 27px;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  max-width: 100%;
+  border-color: #c0c0c0;
+  border-width: 1px;
+  margin: 30px auto;
+  display: block;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+:focus {
+  outline: 0;
+}
+
+a {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@-webkit-keyframes totalDuration {
+  0% {
+    background-color: #00e699;
+  }
+  20% {
+    background-color: #0092e6;
+  }
+  30% {
+    background-color: #b800e6;
+  }
+  40% {
+    background-color: #e60086;
+  }
+  50% {
+    background-color: #ff39b3;
+  }
+  60% {
+    background-color: #e66f00;
+  }
+  70% {
+    background-color: #a1e600;
+  }
+  80% {
+    background-color: #08e600;
+  }
+  100% {
+    background-color: #3cca1f;
+  }
+}
+
+@keyframes totalDuration {
+  0% {
+    background-color: #00e699;
+  }
+  20% {
+    background-color: #0092e6;
+  }
+  30% {
+    background-color: #b800e6;
+  }
+  40% {
+    background-color: #e60086;
+  }
+  50% {
+    background-color: #ff39b3;
+  }
+  60% {
+    background-color: #e66f00;
+  }
+  70% {
+    background-color: #a1e600;
+  }
+  80% {
+    background-color: #08e600;
+  }
+  100% {
+    background-color: #3cca1f;
+  }
+}
+
+body {
+  background-color: #1e1f29;
+}
+
+body .video-player {
+  width: 100%;
+  color: #fff;
+}
+
+body .video-player video {
+  width: 100%;
+}
+
+body .video-player .controls {
+  position: relative;
+  top: -93px;
+  background: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(82%, rgba(6, 6, 6, 0.818441)), color-stop(97%, black));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(6, 6, 6, 0.818441) 82%, black 97%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
+  padding: 0 17px;
+  margin-bottom: -93px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body .video-player .controls #totalDuration {
+  width: 100%;
+  height: 6px;
+  background-color: #c0c0c0d8;
+  cursor: pointer;
+}
+
+body .video-player .controls #duration {
+  position: relative;
+  top: -6px;
+  width: 0;
+  height: 6px;
+  background-color: #ff3232;
+  text-align: right !important;
+  cursor: pointer;
+}
+
+body .video-player .controls #duration svg {
+  width: 18px;
+  position: relative;
+  top: -7px;
+  right: -0.5px;
+}
+
+body .video-player .controls #duration svg:active {
+  cursor: pointer;
+}
+
+body .video-player .controls .details {
+  padding: 10px 0;
+}
+
+body .video-player .controls .details i,
+body .video-player .controls .details svg {
+  width: 24px;
+  color: #fff;
+  vertical-align: middle;
+}
+
+body .video-player .controls .details .backward-forward {
+  display: inline-block;
+  padding: 0 8px;
+  vertical-align: middle;
+}
+
+body .video-player .controls .details .backward-forward a {
+  display: inline-block;
+}
+
+body .video-player .controls .details .backward-forward a svg {
+  width: 60px;
+}
+
+body .video-player .controls .details .backward-forward a svg path {
+  fill: white;
+}
+
+body .video-player .controls .details .time {
+  display: inline-block;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+body .video-player .controls .details #screenResizer {
+  display: inline-block;
+}
+
+body .video-player .controls .details #screenResizer svg {
+  position: relative;
+  top: 4px;
+  width: 49px;
+  color: #fff;
+}
+
+body .video-player .controls .details .vol-hover {
+  display: inline-block;
+  height: 43px;
+  width: 53px;
+}
+
+body .video-player .controls .details .vol-hover:hover .vol-bg {
+  display: block;
+}
+
+body .video-player .controls .details .vol-hover .vol-bg {
+  display: none;
+  position: absolute;
+  margin-left: -91px;
+  margin-top: -82px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  background: #000000a6;
+  padding: 13px 11px 13px 73px;
+}
+
+body .video-player .controls .details .vol-hover .vol-bg .volume-change {
+  display: inline-block;
+  width: 150px;
+  height: 22px;
+}
+
+body .video-player .controls .details .vol-hover .vol-bg .volume-change .slider {
+  position: relative;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: transparent;
+  outline: none;
+  -webkit-transition: 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  z-index: 100;
+}
+
+body .video-player .controls .details .vol-hover .vol-bg .volume-change .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+body .video-player .controls .details .vol-hover .vol-bg .volume-change .slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+body .video-player .controls .details .vol-hover .vol-bg .volume-change #updateVolume {
+  position: relative;
+  top: -14px;
+  width: 0;
+  height: 6px;
+  background: #ff0000;
+  cursor: pointer;
+  z-index: 1;
+}
+
+body .video-player .controls .details .vol-hover .vol-bg .volume-change .range-full {
+  position: relative;
+  top: -8px;
+  width: 100%;
+  height: 6px;
+  background: #b9b7b4;
+  cursor: pointer;
+  z-index: 0;
+}
+
+body .video-player .controls .details .vol-hover #sound {
+  display: inline-block;
+}
+
+body .video-player .controls .details .vol-hover #sound svg {
+  width: 53px;
+  position: relative;
+  top: 3px;
+}
+
+body .video-player .controls .details .speed-hover {
+  display: inline-block;
+  height: 43px;
+  width: 53px;
+}
+
+body .video-player .controls .details .speed-hover:hover .speed-box {
+  display: block;
+}
+
+body .video-player .controls .details .speed-hover .speed-box {
+  position: absolute;
+  display: none;
+  width: 48px;
+  height: 234px;
+  background: #000000a6;
+  text-align: center;
+  margin-top: -181.3px;
+  margin-left: 3.5px;
+}
+
+body .video-player .controls .details .speed-hover .speed-box li {
+  font-family: "Rubik";
+  font-size: 18px;
+  padding: 15px 0;
+  list-style: none;
+  cursor: pointer;
+}
+
+body .video-player .controls .details .speed-hover .speed-box li:hover {
+  background-color: #000000be;
+}
+
+body .video-player .controls .details .speed-hover #videoSpeed svg {
+  width: 50px;
+  position: relative;
+  top: 3px;
+}
+
+body .video-player .fullscreen-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 100;
+}
+
+body .video-player .fullscreen-controls {
+  position: absolute;
+  width: 100%;
+  top: auto;
+  margin-bottom: 0px;
+  bottom: 0;
+  z-index: 1000;
+}
+/*# sourceMappingURL=style.css.map */

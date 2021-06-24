@@ -1,0 +1,443 @@
+// imports
+
+@import "variables";
+
+html {
+  scroll-behavior: smooth;
+}
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+a {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+p {
+  line-height: 27px;
+}
+/* change colours to suit your needs */
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+/* change colours to suit your needs */
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* change border colour to suit your needs */
+
+hr {
+  max-width: 100%;
+  border-color: #c0c0c0;
+  border-width: 1px;
+  margin: 30px auto;
+  display: block;
+}
+input,
+select {
+  vertical-align: middle;
+}
+:focus {
+  outline: 0;
+}
+a {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+@keyframes totalDuration {
+  0% {
+    background-color: #00e699;
+  }
+  20% {
+    background-color: #0092e6;
+  }
+  30% {
+    background-color: #b800e6;
+  }
+  40% {
+    background-color: #e60086;
+  }
+  50% {
+    background-color: #ff39b3;
+  }
+  60% {
+    background-color: #e66f00;
+  }
+  70% {
+    background-color: #a1e600;
+  }
+  80% {
+    background-color: #08e600;
+  }
+  100% {
+    background-color: #3cca1f;
+  }
+}
+body {
+  background-color: rgb(30, 31, 41);
+  .video-player {
+    width: 100%;
+    color: #fff;
+    video {
+      width: 100%;
+    }
+    .controls {
+      position: relative;
+      top: -93px;
+      background: rgb(255, 255, 255);
+      background: -moz-linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(6, 6, 6, 0.8184407552083334) 82%,
+        rgba(0, 0, 0, 1) 97%
+      );
+      background: -webkit-linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(6, 6, 6, 0.8184407552083334) 82%,
+        rgba(0, 0, 0, 1) 97%
+      );
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(6, 6, 6, 0.8184407552083334) 82%,
+        rgba(0, 0, 0, 1) 97%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
+      padding: 0 17px;
+      margin-bottom: -93px;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      #totalDuration {
+        width: 100%;
+        height: 6px;
+        background-color: #c0c0c0d8;
+        cursor: pointer;
+      }
+      #duration {
+        position: relative;
+        top: -6px;
+        width: 0;
+        height: 6px;
+        background-color: #ff3232;
+        text-align: right !important;
+        cursor: pointer;
+        svg {
+          width: 18px;
+          position: relative;
+          top: -7px;
+          right: -0.5px;
+          &:active {
+            cursor: pointer;
+          }
+        }
+      }
+      .details {
+        padding: 10px 0;
+        i,
+        svg {
+          width: 24px;
+          color: #fff;
+          vertical-align: middle;
+        }
+        .backward-forward {
+          display: inline-block;
+          padding: 0 8px;
+          vertical-align: middle;
+          a {
+            display: inline-block;
+            svg {
+              width: 60px;
+              path {
+                fill: white;
+              }
+            }
+          }
+        }
+        .time {
+          display: inline-block;
+          font-size: 20px;
+          vertical-align: middle;
+        }
+        #screenResizer {
+          display: inline-block;
+          svg {
+            position: relative;
+            top: 4px;
+            width: 49px;
+            color: #fff;
+          }
+        }
+        .vol-hover {
+          display: inline-block;
+          height: 43px;
+          width: 53px;
+          &:hover .vol-bg {
+            display: block;
+          }
+          .vol-bg {
+            display: none;
+            position: absolute;
+            margin-left: -91px;
+            margin-top: -82px;
+            transform: rotate(270deg);
+            background: #000000a6;
+            padding: 13px 11px 13px 73px;
+            .volume-change {
+              display: inline-block;
+              width: 150px;
+              height: 22px;
+              .slider {
+                position: relative;
+                -webkit-appearance: none;
+                width: 100%;
+                height: 6px;
+                background: transparent;
+                outline: none;
+                -webkit-transition: 0.2s;
+                transition: opacity 0.2s;
+                z-index: 100;
+
+                &::-webkit-slider-thumb {
+                  -webkit-appearance: none;
+                  appearance: none;
+                  width: 15px;
+                  height: 15px;
+                  border-radius: 50%;
+                  background: #fff;
+                  border: none;
+                  cursor: pointer;
+                }
+
+                &::-moz-range-thumb {
+                  width: 15px;
+                  height: 15px;
+                  border-radius: 50%;
+                  background: #fff;
+                  border: none;
+                  cursor: pointer;
+                }
+              }
+              #updateVolume {
+                position: relative;
+                top: -14px;
+                width: 0;
+                height: 6px;
+                background: #ff0000;
+                cursor: pointer;
+                z-index: 1;
+              }
+              .range-full {
+                position: relative;
+                top: -8px;
+                width: 100%;
+                height: 6px;
+                background: #b9b7b4;
+                cursor: pointer;
+                z-index: 0;
+              }
+            }
+          }
+          #sound {
+            display: inline-block;
+            svg {
+              width: 53px;
+              position: relative;
+              top: 3px;
+            }
+          }
+        }
+        .speed-hover {
+          display: inline-block;
+          height: 43px;
+          width: 53px;
+          &:hover .speed-box {
+            display: block;
+          }
+          .speed-box {
+            position: absolute;
+            display: none;
+            width: 48px;
+            height: 234px;
+            background: #000000a6;
+            text-align: center;
+            margin-top: -181.3px;
+            margin-left: 3.5px;
+            li {
+              font-family: "Rubik";
+              font-size: 18px;
+              padding: 15px 0;
+              list-style: none;
+              cursor: pointer;
+              &:hover{
+                background-color: #000000be;
+              }
+            }
+          }
+          #videoSpeed {
+            svg {
+              width: 50px;
+              position: relative;
+              top: 3px;
+            }
+          }
+        }
+      }
+    }
+    .fullscreen-video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      z-index: 100;
+    }
+    .fullscreen-controls {
+      position: absolute;
+      width: 100%;
+      top: auto;
+      margin-bottom: 0px;
+      bottom: 0;
+      z-index: 1000;
+    }
+  }
+}
