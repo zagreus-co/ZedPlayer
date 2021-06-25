@@ -77,7 +77,7 @@ setInterval(() => {
 
 // Time Drag
 
-let drag = (e) => {
+let drag = () => {
   timeDrag = true;
   updateBar(e.pageX);
 };
